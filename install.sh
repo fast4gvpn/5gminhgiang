@@ -101,7 +101,7 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "http://5gminhgiang.site/"
+      ApiHost: "https://5gminhgiang.site/"
       ApiKey: "hhai_hhai_hhai_hhai"
       NodeID: $NodeID80
       NodeType: V2ray 
@@ -129,8 +129,8 @@ Nodes:
       CertConfig:
         CertMode: http
         CertDomain: "$CertDomain80" 
-        CertFile: /etc/XrayR/cert-net/fast4g.crt
-        KeyFile: /etc/XrayR/cert-net/fast4g.key
+        CertFile: /etc/XrayR/5gminhgiang/crt.crt 
+        KeyFile: /etc/XrayR/5gminhgiang/key.key
         Provider: alidns 
         Email: test@me.com
         DNSEnv: 
@@ -139,7 +139,7 @@ Nodes:
   -
     PanelType: "V2board" 
     ApiConfig:
-      ApiHost: "http://5gminhgiang.site/"
+      ApiHost: "https://5gminhgiang.site/"
       ApiKey: "hhai_hhai_hhai_hhai"
       NodeID: $NodeID443
       NodeType: Trojan 
@@ -167,8 +167,8 @@ Nodes:
       CertConfig:
         CertMode: file 
         CertDomain: "$CertDomain443"
-        CertFile: /etc/XrayR/cert-net/fast4g.crt 
-        KeyFile: /etc/XrayR/cert-net/fast4g.key
+        CertFile: /etc/XrayR/5gminhgiang/crt.crt 
+        KeyFile: /etc/XrayR/5gminhgiang/key.key
         Provider: cloudflare 
         Email: test@me.com
         DNSEnv: 
@@ -177,7 +177,7 @@ Nodes:
 
 EOF
 	cd /etc/XrayR
-	git clone https://github.com/fast4gvpn/cert-net.git
+	git clone https://github.com/fast4gvpn/5gminhgiang.git
 	XrayR restart
 	green "Đã xong, reboot nếu k thành công！"
 	exit 1
